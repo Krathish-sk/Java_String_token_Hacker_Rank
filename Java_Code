@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class Stringtokens
+{
+  public static void main(String[] args)
+  {
+    Scanner in = new Scanner(System.in);
+    System.out.println("Enter the String :-");
+    String s = in.nextLine();
+    int n =s.length();
+    s = s.trim();
+    
+    if(n ==0)
+    {
+      System.out.println("There are no character in the string !!!");
+    }
+    else
+    {
+      String[] newstring = s.split("['!?,._@ ]+");
+      System.out.println(newstring.length);
+      for(String i : newstring)
+      {
+         System.out.println(i);
+      }
+    }
+  }
+}  
